@@ -1,0 +1,3 @@
+1) laith academy NUXT legacy + NUXT 3 lectures (follow and make projects) (58 lectures of legacy + )
+2) integrate NUXT.js with laravel + vite + pinia + Bootstrap vue+ vue 3.
+3) create a full stack NUXT application using PHP as backend.
