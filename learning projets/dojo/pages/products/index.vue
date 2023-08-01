@@ -1,5 +1,9 @@
 <template>
-    <div>        
+    <div> 
+        <Head>
+            <Title>Nuxt Dojo | products</Title>
+            <Meta name='description' content="Nuxt 3 products page"/>
+        </Head> 
         <div class ="grid grid-cols-5 gap-5">
             <!-- looping through the products and assigning product ID to the URL -->
             <div v-for="p in products">
@@ -18,6 +22,18 @@
 
     //fetch data and name the data as products
     const {data:products} = await useFetch('https://fakestoreapi.com/products');
+
+
+    // useHead({
+    //     title: 'Nuxt Dojo | products',
+    //     meta:[
+    //         {
+    //             name: 'description',
+    //             content: 'Nuxt 3 products page'
+    //         }
+    //     ]
+    // })
+
 </script>
 
 <style scoped>

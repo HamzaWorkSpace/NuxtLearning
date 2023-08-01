@@ -1,5 +1,9 @@
 <template>
     <div>
+        <Head>
+            <Title>Nuxt Dojo | {{ product.title }}</Title>
+            <Meta name='description' :content="product.description"/>
+        </Head> 
         <ProductDetail :productDetail="product"/> 
 
     </div>
@@ -12,13 +16,13 @@
 
     const {data:product} = await useFetch(uri,{key:id});
 
+    if(!product.value)
+    {
+       throw createError({statusCode:404, message:'PRODUCT NOT FOUND', fatal: true})
+    }
+
     definePageMeta({
         layout:'products'
     });
-
-    //console.log(product);
-
-    //https://tailwindcss.nuxtjs.org/getting-started/setup
-    //to add tailwind css to nuxt project
 </script>
 
